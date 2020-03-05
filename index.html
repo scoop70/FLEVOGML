@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>GMLFlevolandTsT</title>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript">
+		 $(document).ready(function() {
+			// Check if the URL parameter is apples
+			if (dynamicContent == 'apples') {
+				$('#apples').show();
+			}
+			// Check if the URL parameter is oranges
+			else if (dynamicContent == 'oranges') {
+				$('#oranges').show();
+			}
+			// Check if the URL parameter is bananas
+			else if (dynamicContent == 'bananas') {
+				$('#bananas').show();
+			}
+			// Check if the URL parmeter is empty or not defined, display default content
+			else {
+				$('#default-content').show();
+			}
+		});
+		</script>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript">
+			// Parse the URL parameter
+			function getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			}
+			// Give the parameter a variable name
+			var dynamicContent = getParameterByName('dc');
+
+			 $(document).ready(function() {
+
+				// Check if the URL parameter is apples
+				if (dynamicContent == 'apples') {
+					$('#apples').show();
+				}
+				// Check if the URL parameter is oranges
+				else if (dynamicContent == 'oranges') {
+					$('#oranges').show();
+				}
+				// Check if the URL parameter is bananas
+				else if (dynamicContent == 'bananas') {
+					$('#bananas').show();
+				}
+				// Check if the URL parmeter is empty or not defined, display default content
+				else {
+					$('#default-content').show();
+				}
+			});
+		</script>
+		<style>
+			html{font-family: arial}
+			.dynamic-content {
+			    display:none;
+			}
+			.theme-content {
+		    min-height: 200px;
+		    padding: 50px 0px 50px 0px;
+				background-color: #F5F5F5;
+				margin-bottom:20px;
+		}
+		.aligncenter{
+			text-align:center;
+		}
+		.contentholder{
+			border:10px solid #f2f2f2;
+			margin:auto;
+			padding:20px 50px;
+			width:800px;
+		}
+		</style>
+</head>
+
+<body>
+	<b>Toon:</b>
+	<div class="contentlinks">
+		<ul>
+			<li><a href="index.html">Start pagina</a></li>
+			<li><a href="index.html?dc=apples">Geometrische begrenzing oppervlaktewaterlichamen beheer van de waterkwaliteit</a></li>
+			<li><a href="index.html?dc=oranges">Geometrische begrenzing kustfundament</a></li>
+			<li><a href="index.html?dc=bananas">Geometrische begrenzing civiele explosieaandachtsgebieden B</a></li>
+		</ul>
+	</div>
+
+
+	<div class="aligncenter">
+		<div id="default-content" class="dynamic-content">
+			<h1>Heading</h1>
+			<div class="theme-content">
+				<img src="https://i.picsum.photos/id/960/400/400.jpg" />
+			</div>
+			<div class="contentholder">
+		 		<p>Dit informatieobject bevat geometrieën die zijn uitgedrukt in de Geography Markup Language (GML). Deze pagina toont voor u de geometrieën op de kaart. Het GML-bestand is echter de authentieke versie van de vastgestelde geometrieën.</p>
+			</div>
+		</div>
+
+		<div id="apples" class="dynamic-content">
+			<h1>Geometrische begrenzing oppervlaktewaterlichamen beheer van de waterkwaliteit</h1>
+			<div class="theme-content">
+				<img src="https://i.picsum.photos/id/184/400/400.jpg" />
+			</div>
+			<div class="contentholder">
+				<h2>Gegevens in het informatieobject</h2>
+				<span>Het GML-bestand is echter de authentieke versie van de vastgestelde geometrieën. U kunt de authentieke versie downloaden via</span><br /><br />
+				<a href="/" title="">Geometrische begrenzing oppervlaktewaterlichamen beheer van de waterkwaliteit</a>
+			</div>
+		</div>
+
+		<div id="oranges" class="dynamic-content">
+			<h1>Geometrische begrenzing rivierbed grote rivieren</h1>
+			<div class="theme-content">
+				<img src="https://i.picsum.photos/id/320/400/400.jpg" />
+			</div>
+			<div class="contentholder">
+				<h2>Gegevens in het informatieobject</h2>
+				<span>Het GML-bestand is echter de authentieke versie van de vastgestelde geometrieën. U kunt de authentieke versie downloaden via</span><br /><br />
+				<a href="/" title="">Gegevens in het informatieobject</a>
+			</div>
+		</div>
+
+		<div id="bananas" class="dynamic-content">
+			<h1>Geometrische begrenzing civiele explosieaandachtsgebieden B</h1>
+			<div class="theme-content">
+				<img src="https://i.picsum.photos/id/160/400/400.jpg" />
+			</div>
+			<div class="contentholder">
+				<h2>Gegevens in het informatieobject</h2>
+				<span>Het GML-bestand is echter de authentieke versie van de vastgestelde geometrieën. U kunt de authentieke versie downloaden via</span><br /><br />
+				<a href="/" title="">geometrische begrenzing civiele explosieaandachtsgebieden B</a>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
