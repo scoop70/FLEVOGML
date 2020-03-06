@@ -59,6 +59,28 @@
 				}
 			});
 		</script>
+		<link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css">
+		<script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+		<script src="https://nlmaps.nl/dist/nlmaps.iife.js"></script>
+		<script>
+		    var nlMapsHolder = document.getElementById('nlmaps-holder');
+		    nlMapsHolder.style.height = '300px'; // Change to required height
+
+		    var opts = {
+			style: 'standaard',
+			target: 'nlmaps-holder',
+			center: {
+			    longitude: 5.470885,
+			    latitude: 52.506901
+			},
+			overlay: 'false',
+			marker: false,
+			search: false,
+			zoom: 10
+		    };
+		    var map = nlmaps.createMap(opts);
+		</script>
+		
 		<style>
 			html{font-family: arial}
 			.dynamic-content {
@@ -98,7 +120,9 @@
 		<div id="default-content" class="dynamic-content">
 			<h1>Heading</h1>
 			<div class="theme-content">
-				<img src="https://i.picsum.photos/id/960/400/400.jpg" />
+				<!--kaart-->
+				<div id="nlmaps-holder"></div>
+				<!--kaart-->
 			</div>
 			<div class="contentholder">
 		 		<p>Dit informatieobject bevat geometrieën die zijn uitgedrukt in de Geography Markup Language (GML). Deze pagina toont voor u de geometrieën op de kaart. Het GML-bestand is echter de authentieke versie van de vastgestelde geometrieën.</p>
